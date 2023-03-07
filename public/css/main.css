@@ -1,10 +1,15 @@
 html{
     line-height:1.15;
-    -webkit-text-size-adjust:100%
+    -webkit-text-size-adjust:100%;
+    height: 100%;
 }
 
 body{
-    margin:0
+    margin:0;
+    padding-bottom: 12rem;
+    min-height: 100%;
+    position: relative;
+    background-color:#f1f1f1;
 }
 
 a{
@@ -29,6 +34,7 @@ html{
     Noto Color Emoji;
     line-height:1.5
 }
+
 *, :after,:before{
     box-sizing:border-box;
     border:0 solid #e2e8f0
@@ -354,7 +360,9 @@ video{
   font-size:15px;
   line-height:24px;
   color:#737373;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   bottom:0;
   width:100%;
 }
@@ -453,8 +461,8 @@ video{
 }
 
 main {
-  background-color: #26272b;
-  border-radius: 1rem;
+  /* background-color: #26272b;
+  border-radius: 1rem; */
   /* width: 75rem; */
 }
 h1 {
@@ -462,12 +470,15 @@ h1 {
   font-weight: 300;
 }
 table {
-  display: block;
+  display: relative;
   padding: 20px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   color: #fff;
   font-family: 'Lato', sans-serif;
+
+  background-color: #26272b;
+  border-radius: 1rem;
 }
 
 tr,td,tbody {
@@ -523,6 +534,24 @@ thead {
 }
 .select_view:before {
   display: none;
+}
+
+/* Required Fields */
+label.error {
+  color: red;
+  display: block;
+  margin-top: 5px;
+}
+
+input.error, textarea.error {
+border: 1px dashed red;
+font-weight: 300;
+color: red;
+}
+
+input.valid.success-alert {
+  border: 2px solid #4CAF50;
+  color: green;
 }
 
 @media (min-width: 460px) {
@@ -595,3 +624,6 @@ thead {
   border-style: none;
   margin-top: 0.4rem; 
 }
+
+
+

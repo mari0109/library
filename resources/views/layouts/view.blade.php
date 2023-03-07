@@ -6,18 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('title')</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- CSS Style -->
         <link href="/css/app.css" rel="stylesheet"> <!--bootstrap-->
         <link href="/css/main.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+        <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    
         <!-- Load icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
     <body class="antialiased">
         <!-- Navigation Bar -->
@@ -26,19 +25,18 @@
             <div class="flex justify-content-end mr-4">
                 <button class="btn btn-dark"><a href="/create">Add Book</a></button>
                 <!-- Search -->
-                <form class="form-inline rounded ml-2" action="/action_page.php">
-                    <input type="search" class="form-control rounded" placeholder="Search" name="search2">
+                <form class="form-inline rounded ml-2" action="/search" method="GET">
+                    <input type="text" class="form-control rounded" placeholder="Search..." name="search">
                     <button type="submit" class="btn btn-outline-dark my-2 my-lg-0"><i class="fa fa-search"></i></button>
                 </form>
             </div>
         </nav>
         @yield('message')
-        <div class="mt-2 p-6 bg-gray border-t border-gray-200 dark:border-gray-700 md:border-l">
+        <div class="mt-2 p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
             @yield('name')
-            <main class="container mx-auto relative"> 
+            <main class="container mx-auto "> 
                  @yield('content')  
             </main>    
-
         </div>  
 
         <!-- Footer -->
@@ -59,9 +57,14 @@
                     </div>
                 </div>
                 </div>
-            </footer>
-
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script  src="/js/function.js"></script>
+        </footer>   
+        <!-- Javascript -->
+        <!-- must read the jquery js src before the datatable -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>   
+        <script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>  
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+        <script src="/js/main.js"></script>
     </body>
+    
 </html>

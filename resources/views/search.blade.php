@@ -1,12 +1,7 @@
 @extends('layouts.view')
 
-
-@section('title')
-E-Library System - Collections 
-@endsection
-
 @section('name')
-<h1>Book Collections</h1>
+<h1>Search results for "{{ $query }}"</h1>
 @endsection
 
 @section('content')
@@ -29,7 +24,6 @@ E-Library System - Collections
             <td>{{$book->release}}</td>
             <td class="select_view">
                 <a class="button_view btn btn-edit" href="{{"show/" .$book['id']}}">View More</a>
-                <!-- <a class="button_view btn btn-danger" href="{{"delete/" .$book['id']}}" onclick="return confirm('Are you sure you want to delete this record?')">Delete</a> <!-- books/delete/{{$book->id}}-->
             </td>
         </tr>
     @endforeach 
@@ -37,13 +31,4 @@ E-Library System - Collections
 </table> 
 
 
-
-@endsection
-
-@section('message')
-	@if($message = Session::get('success'))
-        <div class="alert alert-success">
-            {{$message}}
-        </div>
-	@endif
 @endsection
