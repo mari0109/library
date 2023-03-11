@@ -14,10 +14,10 @@ $(document).ready(function() {
         required: true,
         minlength: 3
       },
-      type: {
-        required: true
+      // type: {
+      //   required: true
        
-      },
+      // },
       title: {
         required: true
       }
@@ -27,12 +27,15 @@ $(document).ready(function() {
         required: "This field is required",
         minlength: "Code should be at least 3 digits"
       },
-      type: {
-        required: "This field is required"
-      },
+      // type: {
+      //   required: "This field is required"
+      // },
       title: {
         required: "This field is required"
-      }
+      },
+      // release: {
+      //   required: "This field is required"
+      // }
     }
   });
 });

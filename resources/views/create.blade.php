@@ -18,7 +18,7 @@ E-Library System - New
             </div>
             <div class="col form-group mb-3">
                 <label for="type">Type: </label>
-                <input type="text" id="type" name="type" class="form-control-2" value="{{ old('type') }}" required> 
+                <input type="text" id="type" name="type" class="form-control-2" value="{{ old('type') }}"> 
             </div>
         </div>
         <div class="form-group mb-3">

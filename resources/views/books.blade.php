@@ -35,9 +35,6 @@ E-Library System - Collections
     @endforeach 
 </tbody>
 </table> 
-
-
-
 @endsection
 
 @section('message')

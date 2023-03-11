@@ -24,7 +24,6 @@ class BookController extends Controller
 
 		$request->validate([
 			'code' => 'required|min:3|unique:books',
-            'type' => 'required',
             'title' => 'required',
 		]);
 

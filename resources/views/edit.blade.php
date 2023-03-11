@@ -32,7 +32,7 @@ E-Library System - Edit
         </div>
         <div class="form-group mb-3">
             <label for="release">Publication Date:</label>
-            <input type="date" id="release" name="release" class="form-control-2" value="{{ $book->release }}" required>
+            <input type="date" id="release" name="release" class="form-control-2" value="{{ $book->release }}">
         </div>
 
         <div class="form-group mb-3">
